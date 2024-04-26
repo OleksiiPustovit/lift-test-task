@@ -57,7 +57,7 @@ function App() {
       <Header progress={progress} onMenuOpen={handleMenuOpen} onBack={handleBack} />
       {isMenuOpen && <Menu isOpen={isMenuOpen} onClose={handleMenuClose} />}
       {showSurvey && !showQueryForm && <Survey setProgress={setProgress} onSubmit={handleSurveySubmit} />}
-      {showQueryForm && <QueryForm onComplete={handleComplete} setProgress={setProgress} onSubmit={() => {}} />} {/* Додано пусту функцію для onSubmit */}
+      {showQueryForm && <QueryForm onComplete={handleComplete} setProgress={setProgress} onSubmit={() => {}} />}
     </div>
   );
 }

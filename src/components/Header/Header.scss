@@ -33,10 +33,19 @@
 
   &__back-btn {
     background-color: transparent;
-    color: $color-grey;
+    
+    font-size: 15px;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
+    
+    &--black{
+      color: $color-black;
+    }
+    
+    &--grey{
+      color: $color-grey;
+    }
   }
 
   &__progress-info {

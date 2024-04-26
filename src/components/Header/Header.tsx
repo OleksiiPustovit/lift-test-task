@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ progress, onMenuOpen, onBack }) => {
     <header className="header">
       <div className="header__background">
         <div className="header__content">
-          <button className="header__back-btn" onClick={onBack}>
+          <button className={`header__back-btn ${progress >= 66 ? 'header__back-btn--black' : 'header__back-btn--grey'}`} onClick={onBack}>
             &lt;
           </button>
           <div className="header__progress-info">
