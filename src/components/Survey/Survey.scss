@@ -1,0 +1,117 @@
+@import '../../styles/main.scss';
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 520px;
+    width: 100%;
+
+    & .survey__option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border: 1px solid $color-grey;
+      border-radius: 5px;
+      padding: 20px 40px;
+      width: 100%;
+      max-width: 528px;
+      box-sizing: border-box;
+
+      @media (max-width: $mobile-media-width) {
+        margin-bottom: 16px;
+      }
+
+      &.selected {
+        border-color: $color-button-active;
+
+        input[type="checkbox"] {
+          background-color: $color-button-active;
+          border-color: $color-white;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 12px;
+            margin-top: 2px;
+            margin-left: 6px;
+            border: solid $color-white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      &__details {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+      }
+
+      input[type="checkbox"] {
+        margin-left: auto;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $color-white;
+        border: 1px solid $color-button-active;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 10px;
+          border: solid $color-white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+          visibility: hidden;
+        }
+
+        &:checked::after {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__genre {
+    margin-left: 10px;
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 520px;
+    height: 50px;
+    background-color: $color-button;
+    color: $color-white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $color-button-active;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
